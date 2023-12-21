@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/project14
+#    url: jdbc:h2:~/project14
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  profiles:
+    active: local
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+
+        format_sql: true
+        use_sql_comments: true
+        default_batch_fetch_size: 1000
+
+
+
+#log 출력
+logging.level:
+  org.hibernate.SQL: debug
+
+  org.hibernate.orm.jdbc.bind: trace
+
